@@ -3,11 +3,11 @@
 }
 .vl {
   border-left: 6px solid rgb(0, 7, 0);
-  height: 500px;
+  height: 570px;
   position: absolute;
   left: 50%;
   margin-left: -3px;
-  top: 150px;
+  top: 0px;
 }
 
 body {
