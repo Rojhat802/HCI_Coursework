@@ -3,7 +3,8 @@
 <head>
   
   <meta charset="UTF-8">
-  <title>CodePen - CSS Grid: Bullet Journal</title>
+  <title>Bullet Journal</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster|Gochi+Hand|Rock+Salt|Special+Elite" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'><link rel="stylesheet" href="./style.css">
@@ -11,29 +12,58 @@
 </head>
 <body>
     
-    
 
-<!-- partial:index.partial.html -->
+
+<div class="popup-box">
+  <div class="popup">
+    <div class="content">
+      <header>
+        <p></p>
+        <i class="uil uil-times"></i>
+      </header>
+      <form action="#">
+        <div class="row title">
+          <label>Title</label>
+          <input type="text" spellcheck="false">
+        </div>
+        <div class="row description">
+          <label>Description</label>
+          <textarea spellcheck="false"></textarea>
+        </div>
+        <button></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 <div class="main-content">
   <div class="notebook">
     <div class="notebook__inner">
       <div class="title"> 
-        <h1>Tracker</h1>
-        <h1 style="position:relative; left:350px; bottom: 50px;">Journal</h1>
-        <h3>April 29 - May 6</h3>
+        <h1>Journal</h1>
+        <h1 style="position:relative; left:500px; bottom: 50px;">Tracker</h1>
       </div>
       <div class="days" >
-        <button class="button-90" style="position:relative; right:95px; ">+</button>
-        <button class="button-90" style="position:relative; left:225px; ">+</button>   
+        <!-- <button class="button-90" style="position:relative; right:95px; ">+</button> -->
+        <button class="button-90" style="position:relative; left:380px; ">+</button>   
        
       </div>
       
-      
-     
+      <div></div>
+        <div class="wrapper">
+          <li class="add-box">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Add new Journal
+            </p>
+          </li>
+        </div>    
+      </div>
      
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="ScriptAddJournal.js"></script>
 </body>
 </html>
 -
