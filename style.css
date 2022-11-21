@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
 }
+.vl {
+  border-left: 6px solid rgb(0, 7, 0);
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 150px;
+}
 
 body {
   background: #222;
