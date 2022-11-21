@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .vl {
   border-left: 6px solid rgb(0, 7, 0);
   height: 570px;
