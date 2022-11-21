@@ -86,10 +86,10 @@ body {
   margin: 30px;
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(auto-fill, 170px);
+  grid-template-columns: repeat(auto-fill, 180px);
 }
 .wrapper li{
-  height: 200px;
+  height: 300px;
   list-style: none;
   border-radius: 5px;
   padding: 15px 20px 20px;
