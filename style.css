@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 5px solid black;
+}
+
 .vl {
   border-left: 6px solid rgb(0, 7, 0);
   height: 570px;
