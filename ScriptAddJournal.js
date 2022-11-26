@@ -31,7 +31,7 @@ function showNotes() {
     document.querySelectorAll(".note").forEach(li => li.remove());
     notes.forEach((note, id) => {
         let filterDesc = note.description.replaceAll("\n", '<br/>');
-        let liTag = `<li class="note">
+        let liTag = `<li tabindex="2" class="note">
                         <div class="details">
                             <p>${note.title}</p>
                             <span>${filterDesc}</span>
