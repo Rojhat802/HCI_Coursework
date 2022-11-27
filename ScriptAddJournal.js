@@ -31,7 +31,7 @@ function showNotes() {
     document.querySelectorAll(".note").forEach(li => li.remove());
     notes.forEach((note, id) => {
         let filterDesc = note.description.replaceAll("\n", '<br/>');
-        let liTag = `<li tabindex="2" class="note">
+        let liTag = `<li class="note">
                         <div class="details">
                             <p>${note.title}</p>
                             <span>${filterDesc}</span>
@@ -68,6 +68,29 @@ function deleteNote(noteId) {
     localStorage.setItem("notes", JSON.stringify(notes));
     showNotes();
 }
+
+function myFunctions() {
+    location.replace("accessible.html")
+  }
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
 function updateNote(noteId, title, filterDesc) {
     let description = filterDesc.replaceAll('<br/>', '\r\n');
