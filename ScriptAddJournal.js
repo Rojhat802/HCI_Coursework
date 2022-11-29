@@ -33,16 +33,16 @@ function showNotes() {
         let filterDesc = note.description.replaceAll("\n", '<br/>');
         let liTag = `<li class="note">
                         <div class="details">
-                            <p>${note.title}</p>
-                            <span>${filterDesc}</span>
+                            <p tabindex="2">${note.title}</p>
+                            <span tabindex="2">${filterDesc}</span>
                         </div>
                         <div class="bottom-content">
-                            <span>${note.date}</span>
+                            <span tabindex="2" >${note.date}</span>
                             <div class="settings">
-                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h" tabindex="2"></i>
                                 <ul class="menu">
                                     <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
-                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
+                                    <li onclick="deleteNote(${id})><i class="uil uil-trash"></i>Delete</li>
                                 </ul>
                             </div>
                         </div>
