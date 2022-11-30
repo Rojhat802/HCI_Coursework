@@ -105,3 +105,84 @@ addBtn.addEventListener("click", e => {
         closeIcon.click();
     }
 });
+
+function bg(btnGrpId) {
+    var bgGroupId = btnGrpId;
+    var selClass = "btn-sel";
+    var bgVal = parseInt(document.getElementById(bgGroupId).getAttribute("data-bgval"));
+	var bgVal2 = parseInt(document.getElementById(bgGroupId).getAttribute("data-bgval2"));
+    //Create event listeners for the child buttons
+    document.getElementById(btnGrpId).addEventListener("click", function (e) {
+        var el = e.target || e.srcElement;
+        if (el && el.nodeName == "BUTTON") {
+            if (el.classList.contains(selClass)) {
+                el.classList.remove(selClass);
+                bgVal -= parseInt(el.value);
+            } else {
+                el.classList.add(selClass);
+                bgVal += parseInt(el.value);
+            }
+            el.parentNode.setAttribute("data-bgval", bgVal);
+        }
+    });
+
+
+    //Public function for getting and setting the current value
+    this.value = function (daysVal) {
+        //Apply preset bgval days
+        //Set all to unselected to start with
+        if(daysVal !== null && daysVal !== undefined){
+            var elmts = document.getElementById(btnGrpId).children;
+            for (var i = 0; i < elmts.length; i++) {
+                var dayVal = parseInt(elmts[i].value);
+                if ((dayVal & daysVal) == dayVal) { //use bitwise to see if current day bit is set
+                    elmts[i].classList.add(selClass);
+                } else {
+                    elmts[i].classList.remove(selClass);
+                }
+            }
+        }
+        return bgVal;
+    }
+
+    this.value(bgVal);
+
+};
+
+var mybg = new bg('divButtonGroup');
+var mybg = new bg('divButtonGroup2');
+
+function updateValue(){
+  document.getElementById("spanVal").innerHTML = mybg.value();
+}
+
+function setVal(){
+  var val = parseInt(document.getElementById('txtInput').value);
+  mybg.value(val);
+}
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
