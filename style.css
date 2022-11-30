@@ -378,3 +378,188 @@ form button{
     font-size: 17px;
   }
 }
+.btn-grp{
+  vertical-align:middle;
+  display:inline-block;
+  float:center;
+  display: inline-block;
+  width:100%;
+  height:200%;
+  left:175px
+}
+
+.btn-grp button{
+   font-size:inherit;
+   border:#505050 1px solid;
+   padding:0.9em;
+   border-left:none;
+   outline: none; 
+   cursor:pointer;
+   background: -webkit-linear-gradient(top, #b9b9b9, #7d7d7d);
+   color:#fff;
+   display: inline-block;
+   width:100%;
+}
+
+
+.btn-grp button:first-child{
+  border-left:#505050 1px solid;
+  border-radius: 0.8em 0px 0px 0.8em;
+}
+
+.btn-grp button:last-child{
+  border-radius: 0px 0.8em 0.8em 0px;
+}
+
+.btn-grp button:hover{
+  color:#505050;
+
+}
+
+.btn-grp .btn-sel{
+   back_ground:#aaa;
+   background:rgba(255,255,255,0.25);
+   background-color: #869d33;
+   background: -webkit-linear-gradient(top, #b8ce68, #869d33);
+   color:#fff
+}
+
+
+.btn-grp2{
+  vertical-align:middle;
+  display:inline-block;
+  width:100%;
+}
+
+.btn-grp2 button{
+   float:left;
+   font-size:inherit;
+   border:#505050 1px solid;
+   padding:0.9em;
+   border-left:none;
+   outline: none; 
+   cursor:pointer;
+   background: -webkit-linear-gradient(top, #b9b9b9, #7d7d7d);
+   color:#fff;
+   width:100%;
+}
+
+
+.btn-grp2 button:first-child{
+  border-left:#505050 1px solid;
+  border-radius: 0.8em 0px 0px 0.8em;
+}
+
+.btn-grp2 button:last-child{
+  border-radius: 0px 0.8em 0.8em 0px;
+}
+
+.btn-grp2 button:hover{
+  color:#505050;
+
+}
+
+.btn-grp2 .btn-sel{
+   back_ground:#aaa;
+   background:rgba(255,255,255,0.25);
+   background-color: #869d33;
+   background: -webkit-linear-gradient(top, #b8ce68, #869d33);
+   color:#fff;
+   float: center;
+   width:100%
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+  width: 120%;
+  height: 50%;
+  float: center;
+}
+
+
+/* Style the list items */
+ul li {
+  float: center;	
+  cursor: pointer;
+  padding: 12px 8px 12px 40px;
+  width: 75%;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  position:relative; 
+  left:170px; 
+  bottom: 50px;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Style the header */
+.header {
+  position:relative; 
+  left: 105px; 
+  bottom: 1px;
+  padding: 10px;
+  background-color: #ADD8E6;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  margin: 0px;
+  display: table;
+  clear: both;
+  float: center;
+  width: 100px
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #ADF8E6;
+}
